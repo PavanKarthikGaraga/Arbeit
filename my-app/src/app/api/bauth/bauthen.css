@@ -31,27 +31,24 @@ body {
 }
 
 .auth-image {
-  background: linear-gradient(135deg, #4285f4, #34a853);
+  background: white;
   flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+/* Animated background pattern */
 .auth-image::before {
   content: '';
   position: absolute;
   width: 1000px;
   height: 1000px;
-  background: linear-gradient(45deg, #0066ff, #00c6ff);
+  background: linear-gradient(45deg, rgba(0, 102, 255, 0.05), rgba(0, 198, 255, 0.05));
   animation: rotate 15s linear infinite;
   border-radius: 45% 47% 43% 44%;
-  opacity: 0.1;
 }
 
 .auth-image::after {
@@ -59,12 +56,12 @@ body {
   position: absolute;
   width: 1000px;
   height: 1000px;
-  background: linear-gradient(45deg, #0066ff, #00c6ff);
+  background: linear-gradient(45deg, rgba(0, 102, 255, 0.05), rgba(0, 198, 255, 0.05));
   animation: rotate 12s linear infinite reverse;
   border-radius: 47% 45% 44% 43%;
-  opacity: 0.1;
 }
 
+/* Business icon styling */
 .auth-image .business-icon {
   position: relative;
   z-index: 2;
@@ -77,6 +74,7 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+/* Animations */
 @keyframes rotate {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -93,6 +91,16 @@ body {
   50% {
     transform: translateY(-20px);
   }
+}
+
+/* Add subtle dots pattern */
+.auth-image .dots-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#0066ff 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
 }
 
 .auth-image h1 {
@@ -347,6 +355,7 @@ body {
   transition: all 0.3s ease;
   white-space: nowrap;
   min-width: 70px;
+  height: 40px;
 }
 
 .verify-button {
@@ -366,3 +375,14 @@ body {
 .reset-button:hover {
   background-color: #e5e5e5;
 }
+
+/* Adjust input group for company mail */
+.company-mail-group .input-group {
+  margin-bottom: 0;
+}
+
+/* Ensure label doesn't overlap with button */
+.company-mail-group label {
+  z-index: 1;
+}
+

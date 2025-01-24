@@ -39,6 +39,7 @@ const Bauthen = () => {
       <div className="outer-container">
         <div className="auth-container">
           <div className="auth-image">
+            <div className="dots-pattern"></div>
             <div className="business-icon"></div>
           </div>
           <div className="auth-card">
