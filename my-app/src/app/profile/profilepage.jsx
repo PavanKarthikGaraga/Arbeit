@@ -5,7 +5,7 @@ const ProfilePage = () => {
   return (
     <div className="dashboard">
       <aside className="sidebar">
-        <div className="logo">subbb</div>
+        <div className="logo">Arbeit</div>
         <nav>
           <ul>
             <li>Profile</li>
