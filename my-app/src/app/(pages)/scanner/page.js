@@ -140,7 +140,7 @@ export default function ScannerPage() {
       }
 
       const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
-      const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
       // Prepare the prompt
       const prompt = `You are an expert ATS (Applicant Tracking System) analyzer. Analyze this resume and provide detailed feedback in the following format:
